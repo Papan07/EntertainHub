@@ -1,0 +1,275 @@
+/* Error Boundary Styles */
+.error-boundary {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at center, #1a1a2e 0%, #0f0f23 100%);
+  color: white;
+  padding: 2rem;
+}
+
+.error-content {
+  text-align: center;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.error-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.error-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.error-message {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.error-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.error-btn.primary {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  color: white;
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+.error-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 107, 107, 0.4);
+}
+
+.error-btn.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.error-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 107, 107, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Error Details (Development) */
+.error-details {
+  margin-top: 2rem;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.error-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+}
+
+.error-details summary:hover {
+  color: #4ecdc4;
+}
+
+.error-stack {
+  margin-top: 1rem;
+}
+
+.error-stack h3 {
+  color: #ff6b6b;
+  font-size: 1rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.error-stack pre {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* API Error Fallback */
+.api-error-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  padding: 2rem;
+}
+
+.api-error-fallback .error-content {
+  max-width: 400px;
+  padding: 2rem;
+}
+
+.api-error-fallback .error-title {
+  font-size: 1.8rem;
+}
+
+.api-error-fallback .error-message {
+  font-size: 1rem;
+}
+
+/* Network Error */
+.network-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 2rem;
+}
+
+.network-error .error-content {
+  max-width: 400px;
+  padding: 2rem;
+}
+
+.network-error .error-title {
+  font-size: 1.8rem;
+}
+
+.network-error .error-message {
+  font-size: 1rem;
+}
+
+/* Timeout Error */
+.timeout-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 2rem;
+}
+
+.timeout-error .error-content {
+  max-width: 500px;
+  padding: 2rem;
+}
+
+.timeout-error .error-title {
+  font-size: 1.8rem;
+}
+
+.timeout-error .error-message {
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .error-boundary {
+    padding: 1rem;
+  }
+
+  .error-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .error-title {
+    font-size: 2rem;
+  }
+
+  .error-message {
+    font-size: 1.1rem;
+  }
+
+  .error-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .error-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .api-error-fallback .error-content,
+  .network-error .error-content,
+  .timeout-error .error-content {
+    padding: 1.5rem;
+  }
+
+  .api-error-fallback .error-title,
+  .network-error .error-title,
+  .timeout-error .error-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .error-title {
+    font-size: 1.8rem;
+  }
+
+  .error-message {
+    font-size: 1rem;
+  }
+
+  .error-icon {
+    font-size: 3rem;
+  }
+
+  .error-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation for error appearance */
+.error-boundary,
+.api-error-fallback,
+.network-error,
+.timeout-error {
+  animation: errorFadeIn 0.5s ease-out;
+}
+
+@keyframes errorFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
